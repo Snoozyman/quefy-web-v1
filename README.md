@@ -1,24 +1,15 @@
-# test
+# Quefy frontend test
 
-## Project setup
-```
-yarn install
-```
+This is a testing version of the frontend.
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+## TODO
 
-### Compiles and minifies for production
-```
-yarn build
-```
+- Finish up the initial build
+- Add requests 
 
-### Lints and fixes files
-```
-yarn lint
-```
+## Contribute
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+| Syntax | Description |
+| ----------- | ----------- |
+| Header | Title |
+| Paragraph | Text |
