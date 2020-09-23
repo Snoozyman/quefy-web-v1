@@ -21,7 +21,7 @@ class AuthService {
   }
 
   create() {
-    return Api.get('create' + 'create');
+    return Api.get('create');
   }
 }
 

@@ -32,15 +32,6 @@ export default {
                         centered: true
                     },
                     {
-                        field: 'invites',
-                        label: 'Invites',
-                        
-                    },
-                    {
-                        field: 'users',
-                        label: 'Users',
-                    },
-                    {
                         field: 'created',
                         label: 'Date',
                         centered: true
@@ -50,11 +41,18 @@ export default {
         },
         methods: {
             async getData () {
+                try {
                 let response = await Api.get('room')
                 console.log(response.data)
                 this.data = response.data
+                } catch (err) {
+                    this.$buefy.toast.open({ 
+                        message: err.message,
+                        type: 'is-danger'
+                    })
+                }
             }
-        }
+        },
 }
 </script>
 
