@@ -2,8 +2,8 @@ import Api from '../Api'
 
 class AuthService {
   async join(user) {
-    let response = await Api.post('join', { 
-        nickname: user.nickname,
+    let response = await Api.post('q/join', { 
+        username: user.username,
         inviteCode: user.inviteCode
     })
     if(response.data.accessToken){
@@ -14,7 +14,7 @@ class AuthService {
 
   logout() {
     let user = localStorage.getItem('user')
-    if(user.role) {
+    if(user.owner) {
         Api.delete('room/' + user.roomId)
     }
     localStorage.removeItem('user');

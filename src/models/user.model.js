@@ -1,9 +1,9 @@
 export default class User {
-    constructor(nickname, inviteCode) {
+    constructor(username, inviteCode) {
       this.id = ''
       this.roomId = ''
       this.owner = false
-      this.nickname = nickname
+      this.username= username
       this.inviteCode = inviteCode
     }
   }

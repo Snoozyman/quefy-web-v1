@@ -6,7 +6,7 @@
                 <section>
                 <h1 class="title">Join</h1>
                 <b-field>
-                    <b-input v-model="user.nickname" placeholder="Your nickname" size="is-medium"></b-input>
+                    <b-input v-model="user.username" placeholder="Your nickname" size="is-medium"></b-input>
                     <b-input v-model="user.inviteCode" placeholder="Invite code" size="is-medium"></b-input>
                     <b-button
                         @click.prevent="handleLogin()"
@@ -50,7 +50,7 @@ export default {
         handleLogin() {
         this.loading = true;
         console.log('ASDSAD')
-        if (this.user.nickname && this.user.inviteCode) {
+        if (this.user.username && this.user.inviteCode) {
           this.$store.dispatch('auth/LOGIN_DEBUG', this.user).then(
             () => {
               this.$router.push('/room');
